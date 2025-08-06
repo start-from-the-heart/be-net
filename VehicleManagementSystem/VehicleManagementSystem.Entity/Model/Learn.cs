@@ -2,26 +2,51 @@
 {
     internal class Learn
     {
-        private int _learnId;
+        /*
+         * Value Type :
+         *              - Simple Type : int, float, double, boolearn, string, char, DateTime, long, short (object)
+         *              - Enum Type
+         *              - Struct Type
+         *              - Nullable Type
+         * Reference type:
+         *              - Class type
+         *              - Interface Type
+         *              - Array Type
+         *              - Delegate Type
+         */
 
-        public int LearnId
-        {
-            get { return _learnId; }
-            set
-            {
-                checked
-                {
-                    if (_learnId < 0)
-                    {
-                        throw new ArgumentException($"{_learnId} not less than 0");
-                    }
-                    else
-                    {
-                        _learnId = value;
-                    }
-                }
-            }
-        }
+        //private int num = 100;
+
+        //private float rate = 10.2f;
+
+        //private decimal amount = 100.50M;
+
+        //private char code = 'C';
+
+        //private bool isValid = true;
+
+        //private string name = "hoang minh dep trai";
+
+        //private int _learnId;
+
+        //public int LearnId
+        //{
+        //    get { return _learnId; }
+        //    set
+        //    {
+        //        checked
+        //        {
+        //            if (_learnId < 0)
+        //            {
+        //                throw new ArgumentException($"{_learnId} not less than 0");
+        //            }
+        //            else
+        //            {
+        //                _learnId = value;
+        //            }
+        //        }
+        //    }
+        //}
 
         //Unsafe
         //        unsafe
