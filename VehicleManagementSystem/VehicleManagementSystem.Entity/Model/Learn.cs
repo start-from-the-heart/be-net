@@ -1,6 +1,6 @@
 ﻿namespace VehicleManagementSystem.Entity.Model
 {
-    internal class Learn
+    public class Learn
     {
         /*
          * Value Type :
@@ -59,25 +59,73 @@
         //}
 
         //lock ho tro  data luong
-        private static readonly object _lock = new object();
+        //private static readonly object _lock = new object();
 
-        private int counter = 0;
+        //private int counter = 0;
 
-        private void IncreaseCounter()
+        //private void IncreaseCounter()
+        //{
+        //    lock (_lock)
+        //    {
+        //        counter++;
+        //    }
+        //}
+
+        //// example yield
+        //public IEnumerable<int> GetNumber()
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        yield return i;
+        //    }
+        //}
+
+        // Cơ chế hoạt động của Garbage Collection
+
+        //Tracking: GC theo dõi các object trên heap.
+
+        //Mark: Đánh dấu các object vẫn còn được tham chiếu từ stack hoặc static.
+
+        //Sweep: Dọn dẹp(giải phóng) các object không còn được tham chiếu.
+
+        //Compact(nén): Di chuyển object còn sống lại gần nhau để tránh phân mảnh bộ nhớ.
+
+        // example :
+        // value type
+        private int valueType = 0;
+
+        private string status = "sayHello";
+
+        // refercence type
+        public List<int> listNumbers = new List<int>();
+
+        public int Number(out int x, out int y)
         {
-            lock (_lock)
-            {
-                counter++;
-            }
+            x = 0;
+            y = 0;
+            return x + y;
         }
 
-        // example yield
-        public IEnumerable<int> GetNumber()
+        public int number(ref int x, ref int y)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                yield return i;
-            }
+            return x + y;
         }
+
+        //assigns default value 01/01/0001 00:00:00
+        private DateTime dt1 = new DateTime();
+
+        //assigns year, month, day
+        private DateTime dt2 = new DateTime(2015, 12, 31);
+
+        //assigns year, month, day, hour, min, seconds
+        private DateTime dt3 = new DateTime(2015, 12, 31, 5, 10, 20);
+
+        //assigns year, month, day, hour, min, seconds, UTC timezone
+        private DateTime dt4 = new DateTime(2015, 12, 31, 5, 10, 20, DateTimeKind.Utc);
+    }
+
+    internal class ValueTest
+    {
+        private Learn learn = new Learn();
     }
 }
