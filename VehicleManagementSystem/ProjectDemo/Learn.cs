@@ -1,6 +1,6 @@
 ﻿namespace VehicleManagementSystem.Entity.Model
 {
-    internal class Learn
+    public class Learn
     {
         /*
          * Value Type :
