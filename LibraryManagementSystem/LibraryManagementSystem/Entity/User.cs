@@ -14,7 +14,7 @@ namespace LibraryManagementSystem.Entity.Entity
 
         public string PhoneNumber { get; set; } = string.Empty;
 
-        public bool BorrowedBooks { get; set; }
+        public string BorrowedBooks { get; set; }
 
         public long RoleID { get; set; }
 
@@ -22,7 +22,7 @@ namespace LibraryManagementSystem.Entity.Entity
         {
         }
 
-        public User(long userID, string userName, string email, string password, string phoneNumber, bool borrowedBooks, long roleID)
+        public User(long userID, string userName, string email, string password, string phoneNumber, string borrowedBooks, long roleID)
         {
             UserID = userID;
             UserName = userName;

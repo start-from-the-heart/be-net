@@ -15,6 +15,24 @@ namespace LibraryManagementSystem.Entity.Model
 
         public string RelationShip { get; set; } = string.Empty;
 
+        public Teacher()
+        {
+        }
+
+        public Teacher(long userID, string userName, string email,
+                       string password, string phoneNumber,
+                       string borrowedBooks, long roleID,
+                       int certifcate, string className,
+                       float yearsOfExperience, string skill,
+                       string relationShip) : base(userID, userName, email, password, phoneNumber, borrowedBooks, roleID)
+        {
+            Certifcate = certifcate;
+            ClassName = className;
+            YearsOfExperience = yearsOfExperience;
+            Skill = skill;
+            RelationShip = relationShip;
+        }
+
         public IEnumerable<Teacher> GetInformationTeacherByClass(string className, List<Teacher> teachers)
         {
             return teachers.FindAll(x => x.ClassName == className);

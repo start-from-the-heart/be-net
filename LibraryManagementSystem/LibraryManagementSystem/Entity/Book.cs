@@ -33,5 +33,15 @@ namespace LibraryManagementSystem.Entity.Entity
         public decimal Price { get; set; }
 
         public string ISBN { get; set; } = string.Empty;
+
+        public Book(long bookID, string title, string author, int year, decimal price, string iSBN)
+        {
+            BookID = bookID;
+            Title = title;
+            Author = author;
+            Year = year;
+            Price = price;
+            ISBN = iSBN;
+        }
     }
 }

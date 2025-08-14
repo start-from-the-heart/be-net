@@ -9,15 +9,15 @@ namespace LibraryManagementSystem.Entity.Model
 
         public int Age { get; set; }
 
-        public string ManagementOfTeacher { get; set; }
+        public int ManagementOfTeacher { get; set; }
 
         public Student()
         { }
 
         public Student(long userID, string userName, string email,
-                       string password, string phoneNumber, bool borrowedBooks,
+                       string password, string phoneNumber, string borrowedBooks,
                        long roleID, string className, int age,
-                       string managementOfTeacher) : base(userID, userName, email, password, phoneNumber, borrowedBooks, roleID)
+                       int managementOfTeacher) : base(userID, userName, email, password, phoneNumber, borrowedBooks, roleID)
         {
             ClassName = className;
             Age = age;
