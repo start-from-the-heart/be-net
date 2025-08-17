@@ -1,5 +1,4 @@
-﻿using LibraryManagementSystem.Entity.Helper;
-using LibraryManagementSystem.Entity.Model;
+﻿using LibraryManagementSystem.Entity.Model;
 using LibraryManagementSystem.Entity.Model.Interface;
 
 namespace LibraryManagementSystem.Display
@@ -72,7 +71,7 @@ namespace LibraryManagementSystem.Display
             //    new Book(7,"Who is set of your river?","Kim Mi So", 2020,2215564,"4"),
             //};
 
-            //// Q1: Get danh sach hoc sinh muon sach
+            // Q1: Get danh sach hoc sinh muon sach
 
             //var listStudentReadBook = new Dictionary<long, string>();
 
@@ -84,15 +83,17 @@ namespace LibraryManagementSystem.Display
             //// Q2 vi du ve hastable
 
             //var getListStudentOtherName = new Hashtable();
+
             //foreach (var student in listStudent)
             //{
             //    getListStudentOtherName.Add(student.UserID, student.UserName);
             //}
 
             //// Display item
-            //foreach (var student in listStudent)
+            //foreach (var student in getListStudentOtherName)
             //{
-            //    Console.WriteLine(student.GetInformationUser());
+            //    //onsole.WriteLine(student.GetInformationUser());
+            //    Console.WriteLine(student);
             //}
 
             // Demo File
@@ -109,11 +110,11 @@ namespace LibraryManagementSystem.Display
 
                 //TextFileManager.WriteToFile(targetPath, "File is create");
 
-                //TextFileManager.AppendToFile(targetPath, listStudent[0].GetInformationUser());
+                //TextFileManager.AppendToFile(targetPath, listStudent[1].GetInformationUser());
 
-                string contentFile = TextFileManager.ReadFromFile(targetPath);
+                //string contentFile = TextFileManager.ReadFromFile(targetPath);
 
-                Console.WriteLine(contentFile);
+                //Console.WriteLine(contentFile);
             }
         }
     }

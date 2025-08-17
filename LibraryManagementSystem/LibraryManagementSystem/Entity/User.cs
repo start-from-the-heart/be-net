@@ -37,5 +37,10 @@ namespace LibraryManagementSystem.Entity.Entity
         {
             return $"{UserID} - {UserName} - {PhoneNumber}";
         }
+
+        public virtual string ViewData()
+        {
+            return "";
+        }
     }
 }
