@@ -4,7 +4,7 @@
     {
         public static void Main(string[] args)
         {
-            // Collection LIFO
+            //Collection LIFO
             //Stack stack1 = new Stack();
             //stack1.Push(1);
             //stack1.Push("2");
@@ -33,7 +33,7 @@
 
             //myStack.Contains(2); // returns true
 
-            // queue FIFO
+            //queue FIFO
             //Queue<int> queue = new Queue<int>();
             //queue.Enqueue(1);
             //queue.Enqueue(2);
@@ -57,11 +57,11 @@
 
             //Console.WriteLine("Total elements: {0}", strQ.Count);
 
-            add<int> sum = Sum;
-            Console.WriteLine(sum(10, 20));
+            //add<int> sum = Sum;
+            //Console.WriteLine(sum(10, 20));
 
-            add<string> con = Concat;
-            Console.WriteLine(Concat("Hello ", "World!!"));
+            //add<string> con = Concat;
+            //Console.WriteLine(Concat("Hello ", "World!!"));
 
             // Function Delegate
             Func<int, int, int> SumOffTowValue = Sum;
@@ -75,12 +75,12 @@
 
             // Anonymous Method
 
-            Func<int, int> showNumberOfData = delegate (int number)
+            Func<int, int, int> showNumberOfData = delegate (int number, int number2)
             {
                 return number;
             };
 
-            Console.WriteLine("Function Delegate with anoymous method: " + showNumberOfData(3));
+            Console.WriteLine("Function Delegate with anoymous method: " + showNumberOfData(3, 2));
 
             // Function with lamda
 
@@ -123,13 +123,17 @@
             //ProcessBusinessLogic bl = new ProcessBusinessLogic();
             //bl.ProcessCompleted += bl_ProcessCompleted; // register with an event
             //bl.StartProcess();
+
+            List<int> value = new List<int>() { 1, 2, 3 };
+
+            var test = value.Where(x => x > 0).ToList();
         }
 
         // event handler
-        public static void bl_ProcessCompleted()
-        {
-            Console.WriteLine("Process Completed!");
-        }
+        //public static void bl_ProcessCompleted()
+        //{
+        //    Console.WriteLine("Process Completed!");
+        //}
 
         //prints 0
 
