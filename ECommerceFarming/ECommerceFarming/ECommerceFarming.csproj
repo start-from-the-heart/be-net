@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ECommerceFarming.Entity\ECommerceFarming.Entity.csproj" />
     <ProjectReference Include="..\ECommerceFarming.Infrastructure\ECommerceFarming.Infrastructure.csproj" />
   </ItemGroup>
 

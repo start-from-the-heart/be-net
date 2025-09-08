@@ -4,15 +4,13 @@ namespace ECommerceFarming.Infrastructure.Common.Interface
 {
     public interface IRepository<T>
     {
-        T Get(int id);
-
         T GetById(int id);
 
-        T Update(T entity);
+        void Update(T entity);
 
-        T Delete(int id);
+        void Delete(T entity);
 
-        T Add(T entity);
+        void Add(T entity);
 
         IEnumerable<T> GetAll();
 
