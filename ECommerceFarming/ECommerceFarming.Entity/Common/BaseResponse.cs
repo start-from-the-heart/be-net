@@ -1,12 +1,10 @@
-﻿using System.Net;
-
-namespace ECommerceFarming.Entity.Common
+﻿namespace ECommerceFarming.Entity.Common
 {
     public class BaseResponse<T>
     {
         public T? Body { get; set; }
 
-        public HttpStatusCode StatusCode { get; set; }
+        public int StatusCode { get; set; }
 
         public string? Message { get; set; }
 
@@ -14,7 +12,7 @@ namespace ECommerceFarming.Entity.Common
         {
         }
 
-        public BaseResponse(T? body, HttpStatusCode statusCode, string? message)
+        public BaseResponse(T? body, int statusCode, string? message)
         {
             Body = body;
             StatusCode = statusCode;

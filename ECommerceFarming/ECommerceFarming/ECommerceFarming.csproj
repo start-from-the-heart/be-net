@@ -12,6 +12,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="NLog.Web.AspNetCore" Version="6.0.4" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
@@ -19,6 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ECommerceFarming.Entity\ECommerceFarming.Entity.csproj" />
     <ProjectReference Include="..\ECommerceFarming.Infrastructure\ECommerceFarming.Infrastructure.csproj" />
+    <ProjectReference Include="..\ECommerceFarming.Service\ECommerceFarming.Service.csproj" />
   </ItemGroup>
 
 </Project>

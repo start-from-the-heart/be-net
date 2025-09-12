@@ -12,12 +12,14 @@ namespace ECommerceFarming.Infrastructure.UnitOfWork
 
         private IDbContextTransaction? _transaction;
 
-        public ILoginReponsitory loginReponsitory { get; set; }
+        private ILoginReponsitory? _loginReponsitory;
+
+        public ILoginReponsitory LoginReponsitory
+            => _loginReponsitory ??= new LoginReponsitory(_eCommerceDbContext);
 
         public UnitOfWork(ECommerceDbContext eCommerceDbContext)
         {
             _eCommerceDbContext = eCommerceDbContext;
-            loginReponsitory = new LoginReponsitory(_eCommerceDbContext);
         }
 
         public int Complete()

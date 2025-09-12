@@ -12,6 +12,6 @@ namespace ECommerceFarming.Infrastructure.UnitOfWork.Interface
 
         void Rollback();
 
-        public ILoginReponsitory loginReponsitory { get; }
+        ILoginReponsitory LoginReponsitory { get; }
     }
 }
